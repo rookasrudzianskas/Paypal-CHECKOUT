@@ -6,6 +6,13 @@ const PayPalButton = paypal.Buttons.driver("react", { React, ReactDOM });
 
 
 function App() {
+
+    // this is on the approve function
+    const onApprove = (data, actions) => {
+        return actions.order.capture();
+    };
+
+
   return (
     <div className="app">
 
