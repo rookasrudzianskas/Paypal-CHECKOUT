@@ -1,11 +1,13 @@
 import './App.css';
-import React from "react";
+import React, {useState} from "react";
 import ReactDOM from "react-dom"
 
 const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
 
 
 function App() {
+
+    const [price, setPrice] = useState("");
 
     // this is on the approve function
     const onApprove = (data, actions) => {
@@ -34,6 +36,8 @@ function App() {
               createOrder={(data, actions) => createOrder(data, actions)}
               onApprove={(data, actions) => onApprove(data, actions)}
           />
+
+          <input className="input" placeholder="Enter the amount" type="number" onChange={e => setPrice(e.target.value)} value={price}/>
 
         </div>
       </div>

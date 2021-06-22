@@ -11,3 +11,10 @@
     padding: 100px;
     border-radius: 10px;
 }
+
+.input {
+    border: 1px solid lightgray;
+    background-color: transparent;
+    outline: none;
+    padding: 5px;
+}
