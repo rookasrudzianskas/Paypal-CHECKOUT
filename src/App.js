@@ -20,7 +20,7 @@ function App() {
             purchase_units: [
                 {
                     amount: {
-                        value: {price},
+                        value: price,
                     },
                 },
             ],
@@ -37,7 +37,7 @@ function App() {
               onApprove={(data, actions) => onApprove(data, actions)}
           />
 
-          <input className="input" placeholder="Enter the amount" type="number" onChange={e => setPrice(e.target.value)} value={price}/>
+          <input className="input" placeholder="Enter the amount" type="text" onChange={e => setPrice(e.target.value)} value={price}/>
 
         </div>
       </div>
