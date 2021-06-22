@@ -8,7 +8,12 @@ const PayPalButton = paypal.Buttons.driver("react", { React, ReactDOM });
 function App() {
   return (
     <div className="app">
-    <h1>Hello 🚀</h1>
+
+      <PayPalButton
+          createOrder={(data, actions) => createOrder(data, actions)}
+          onApprove={(data, actions) => onApprove(data, actions)}
+      />
+
     </div>
   );
 }
