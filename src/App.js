@@ -9,6 +9,7 @@ function App() {
 
     // this is on the approve function
     const onApprove = (data, actions) => {
+        console.log("This is", data);
         return actions.order.capture();
     };
 
