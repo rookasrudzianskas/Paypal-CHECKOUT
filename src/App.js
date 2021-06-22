@@ -26,14 +26,16 @@ function App() {
 
 
   return (
-    <div className="app">
+        <div className="app">
+      <div className="wrapper">
 
-      <PayPalButton
-          createOrder={(data, actions) => createOrder(data, actions)}
-          onApprove={(data, actions) => onApprove(data, actions)}
-      />
+          <PayPalButton
+              createOrder={(data, actions) => createOrder(data, actions)}
+              onApprove={(data, actions) => onApprove(data, actions)}
+          />
 
-    </div>
+        </div>
+      </div>
   );
 }
 
